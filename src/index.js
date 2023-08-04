@@ -1,3 +1,13 @@
-import { pageload } from "./page-load";
+import { loadhomepage } from "./page-load";
+import { createNavBar } from "./page-load";
+import { clearContent } from "./page-load";
 console.log("test");
-pageload();
+
+createNavBar();
+
+const home = document.getElementById("home");
+home.addEventListener("click", () => {
+    loadhomepage();
+})
+
+loadhomepage();
